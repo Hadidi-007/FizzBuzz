@@ -1,0 +1,66 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+
+}
+
+android {
+    compileSdk androidCompileSdkVersion
+
+    defaultConfig {
+        applicationId "com.hassine.fizzbuzz"
+        minSdk androidMinSdkVersion
+        targetSdk androidTargetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11
+        useIR = true
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+
+    implementation deps.androidx.livedata
+    implementation deps.androidx.viewmodel
+
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.constraintlayout
+    implementation deps.androidx.core_ktx
+    implementation deps.androidx.fragment_ktx
+    implementation deps.androidx.recyclerview
+    implementation deps.androidx.navigation_fragment
+    implementation deps.androidx.navigation_ui
+
+    implementation deps.google.material
+
+    testImplementation deps.test.junit
+    testImplementation deps.arch.core
+}

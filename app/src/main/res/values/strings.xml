@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">FizzBuzz</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="form_fragment_label">Form Fragment</string>
+    <string name="result_fragment_label">Result Fragment</string>
+
+
+    <string name="first_number_input_layout_hint">Enter your first number</string>
+    <string name="second_number_input_layout_hint">Enter your second number</string>
+    <string name="limit_input_layout_hint">Enter your limit number</string>
+    <string name="first_message_hint">Enter your fizz message</string>
+    <string name="second_message_hint">Enter your buzz message</string>
+    <string name="first_number_error">Your number should be greater than 1 and different from the second</string>
+    <string name="second_number_error">Your number should be greater than 1 and different from the first</string>
+    <string name="limit_number_error">Your limit should not be empty and higher than first * second</string>
+    <string name="fizz_message_error">Your fizz should not be empty and different from the buzz</string>
+    <string name="buzz_message_error">Your buzz should not be empty and different from the fizz</string>
+    <string name="go_to_result">Check Result</string>
+</resources>
