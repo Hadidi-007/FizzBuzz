@@ -1,0 +1,48 @@
+ext {
+    // Android
+    androidMinSdkVersion = 21
+    androidTargetSdkVersion = 31
+    androidCompileSdkVersion = 31
+
+    // Versions
+    androidx_core = '1.6.0'
+    androidx_appcompat = '1.3.1'
+    androidx_recyclerview = '1.2.1'
+    androidx_constraintlayout = '2.1.0'
+    androidx_fragment = '1.3.6'
+    androidx_navigation = '2.3.5'
+    android_material = '1.4.0'
+    //lifecycle
+    lifecycle_livedata = '2.3.1'
+    lifecycle_viwmodel = '2.3.1'
+
+    // Test
+    junit = '4.13.2'
+    androidx_junit = '1.1.3'
+    androidx_espresso = '3.4.0'
+    arch_core_testing = '1.1.1'
+
+    // Dependencies
+    deps = [
+        'androidx' : [
+            'appcompat'        : "androidx.appcompat:appcompat:$androidx_appcompat",
+            'recyclerview'     : "androidx.recyclerview:recyclerview:$androidx_recyclerview",
+            'constraintlayout' : "androidx.constraintlayout:constraintlayout:$androidx_constraintlayout",
+            'fragment_ktx'     : "androidx.fragment:fragment-ktx:$androidx_fragment",
+            'core_ktx'         : "androidx.core:core-ktx:$androidx_core",
+            'livedata'         : "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_livedata",
+            'viewmodel'        : "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_viwmodel",
+            'navigation_fragment'           : "androidx.navigation:navigation-fragment-ktx:$androidx_navigation",
+            'navigation_ui'           : "androidx.navigation:navigation-ui-ktx:$androidx_navigation",
+        ],
+        'google'  : [
+            'material' : "com.google.android.material:material:$android_material"
+        ],
+        'test'    : [
+            'junit': "junit:junit:$junit",
+        ],
+        'arch'    : [
+            'core': "android.arch.core:core-testing:$arch_core_testing",
+        ]
+    ]
+}
